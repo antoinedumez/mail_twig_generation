@@ -1,0 +1,32 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+            
+          Votre demande de paiement n°{{ demand_number }} à {{ Nom entreprise OU Nom Prénom OU adresse mail du client }}
+           a bien été programmée pour le {{ demand_first_recuring_date }}.  <br>
+
+           {% if not is_recurent %}
+           Montant TTC de la demande : {{ demand_total_amount }} € <br>
+           {% endif %}
+
+Date d'envoi programmé : {{ program_date }} <br>
+Client : {{ Nom entreprise OU Nom Prénom OU adresse mail du client }} <br>
+
+{{ #if_document }}
+
+{% if is_automatic %}
+Votre client sera notifié de votre demande de paiement par mail à la date programée. <br>
+Vous recevrez également un mail de confirmation. <br>
+
+{% else %}
+À la date programmée, vous recevrez un mail avec le lien de paiement de votre demande à envoyer à votre client (ex : mail, SMS ou messageries instantanées). <br>
+
+{{ endif }}
+            
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

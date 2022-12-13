@@ -1,0 +1,22 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+
+            La demande de paiement n°{{ demand_number }} réglée par votre client 
+            {{ Nom entreprise OU Nom - Prénom OU adresse mail du client }} par prélèvement a été réalisée avec succès ! <br>
+
+Suite à l'initiation de paiement engagée par votre client, nous vous confirmons que la banque émettrice du 
+prélèvement a validé la transaction. Vous recevrez l'argent sur votre compte bancaire sous 48h 
+(sous réserve de délais interbancaires). <br>
+
+Montant TTC : {{ demand_recuring_amount }} € <br>
+Client : {{ Nom entreprise OU Nom - Prénom OU adresse mail du client }}  <br>
+Date du paiement : {{ demand_paiement_date }} <br>
+              
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
