@@ -1,0 +1,26 @@
+{% if cta_link is defined %}
+<tr id="cta">
+  <td>
+    <a
+      href="{{ cta_link }}"
+      target="_blank"
+      style="
+        text-decoration: none;
+        color: #fff;
+        background-color: #02120e;
+        border-top-width: 8px;
+        border-bottom-width: 8px;
+        border-left-width: 15px;
+        border-right-width: 15px;
+        border-radius: 3px;
+        border-style: solid;
+        border-color: #02120e;
+        font-size: 14px;
+        line-height: 35px;
+        font-weight: 500;
+      "
+      >{{ cta_name }}</a
+    >
+  </td>
+</tr>
+{% endif %}
