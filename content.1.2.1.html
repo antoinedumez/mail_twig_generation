@@ -4,7 +4,7 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
             
-          Votre demande de paiement n°{{ demand_number }} à {{ Nom entreprise OU Nom Prénom OU adresse mail du client }}
+          Votre demande de paiement n°{{ demand_number }} à {{ #user_denomination }}
            a bien été programmée pour le {{ demand_first_recuring_date }}.  <br>
 
            {% if not is_recurent %}
@@ -12,7 +12,7 @@
            {% endif %}
 
 Date d'envoi programmé : {{ program_date }} <br>
-Client : {{ Nom entreprise OU Nom Prénom OU adresse mail du client }} <br>
+Client : {{ #user_denomination }} <br>
 
 {{ #if_document }}
 

@@ -6,7 +6,7 @@
 
             {{ user_company }} a clôturé votre paiement récurrent concernant la demande n°{{ demand_number }}. <br>
 
-            Bénéficiaire : {{ Nom entreprise OU Nom Prénom OU adresse mail du client }} <br>
+            Bénéficiaire : {{ #user_denomination }} <br>
             Somme acquittée : {{ demand_total_amount_paid }} <br>
             Date de clôture : {{ demand_closing_date }} <br>
            

@@ -4,8 +4,8 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
             
-            Votre demande de paiement récurrent n°{{ demand_number }} à 
-            {{ Nom entreprise OU Nom Prénom OU adresse mail du client }} a bien été générée. <br>
+            Votre demande de paiement récurrent n°{{ demand_number }} à {{ #user_denomination }}         
+            a bien été générée. <br>
 
 Montant TTC des échéances : {{ demand_recuring_amount }} € <br>
 Récurrence : Tous les {{ demand_recuring_delay }} {{ demand_recuring_type }} <br>
@@ -14,7 +14,7 @@ Récurrence : Tous les {{ demand_recuring_delay }} {{ demand_recuring_type }} <b
 Date de fin : {{ demand_end_date }} <br>
 {% endif %}
 
-Client : {{ Nom entreprise OU Nom Prénom OU adresse mail du client }} <br>
+Client : {{ #user_denomination }} <br>
 
 {{ #if_document }}
 
@@ -25,7 +25,7 @@ Partagez votre lien de paiement directement à votre client via le canal de votr
 (ex : mail, SMS et messageries instantanées). <br>
 
 Lien de paiement : <a href="{{ demand_paiement_link }}"> lien de paiement </a> <br>
-{{ endif }}
+{% endif %}
           </td>
         </tr>
       </table>

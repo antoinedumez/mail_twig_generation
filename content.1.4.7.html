@@ -6,7 +6,7 @@
 
             {{ user_company }} a suspendu votre paiement récurrent concernant la demande n°{{ demand_number }}. <br>
 
-            Bénéficiaire : {{ Nom entreprise OU Nom Prénom OU adresse mail du client }} <br>
+            Bénéficiaire : {{ #user_denomination }} <br>
 
             Récurrence : Tous {{ demand_recuring_delay }} {{ demand_recuring_type }} <br>
 

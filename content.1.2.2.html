@@ -5,14 +5,14 @@
           <td style="font-size: 14px; color:#02130e;">
             
             Votre demande de paiement programmée n°{{ demand_number }} de {{ demand_total_amount }} € TTC à 
-            {{ Nom entreprise OU Nom Prénom OU adresse mail du client }} a bien été annulée. <br>
+            {{ #user_denomination }} a bien été annulée. <br>
 
             {% if not is_recurent %}
             Montant TTC de la demande : {{ demand_total_amount }} € <br>
             {% endif %}
 
 
-            Client : {{ Nom entreprise OU Nom Prénom OU adresse mail du client }} <br>
+            Client : {{ #user_denomination }} <br>
 
             {{ #if_document }}
             

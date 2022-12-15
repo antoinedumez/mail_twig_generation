@@ -4,10 +4,10 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
 
-            Le paiement récurrent de votre client {{ Nom entreprise OU Nom Prénom OU adresse mail du client }}
+            Le paiement récurrent de votre client {{ #user_denomination }}
             concernant la demande n°{{ demand_number }} est maintenant terminé. <br>
 
-Client : {{ Nom entreprise OU Nom Prénom OU adresse mail du client }} <br>
+Client : {{ #user_denomination }} <br>
 {{ #if_document }} <br>
 
 Date de début : {{ demand_starting_date }} <br>

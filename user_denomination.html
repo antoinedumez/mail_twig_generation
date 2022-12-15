@@ -1,0 +1,7 @@
+{% if user_company is defined %} 
+  {{ user_company }}
+{% elseif user_name is defined %}
+  {{ user_name }}
+{% else %}
+  {{ user_email }}
+{% endif %}
