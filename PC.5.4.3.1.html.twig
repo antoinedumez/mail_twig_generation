@@ -1,0 +1,25 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+
+            Votre client <b>{{ final_user_email }}</b> a initié un paiement par virement|carte bancaire pour la demande <b>n°{{ demand_number }}</b> d'un montant de <b>{{ demand_recuring_amount }} €.</b><br> 
+            <b>{{ error_message }}.</b><br>
+
+            Montant : <b>{{ demand_recuring_amount }} €</b><br>
+
+            Client : <b>{{ final_user_email }}</b>><br>
+
+            {{ #if_document }}<br>
+
+            Date de la tentative de paiement : <b>{{ demand_paiement_date }}</b><br>
+            
+            Votre client a été averti par nos équipes et nous allons lui proposer de régler la facture via un autre moyen de paiement.<br>
+            N'hésitez pas à le contacter si le paiement n'est pas rapidement effectué.<br>
+              
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

@@ -1,0 +1,29 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+
+            Votre client <b>{{ #user_denomination }}</b> a initié un paiement pour régler la demande <b>n°{{ demand_number }}</b>. Malheureusement, il semble y avoir eu un échec de paiement.<br>
+
+            Montant : <b>{{ demand_recuring_amount }} €</b><br>
+
+            {% if not is_quick_payment %}
+
+              Client : <b>{{ final_user_email }}</b><br>
+
+            {% endif %}
+            
+            {{ #if_document }}<br>
+
+            Date de la tentative de paiement : <b>{{ demand_paiement_date }}</b><br>
+            
+            Votre client a été averti par nos équipes et nous allons lui proposer de régler la demande de paiement via un autre moyen de paiement.<br>
+            
+            N'hésitez pas à le contacter si le paiement n'est pas rapidement effectué. <br>
+              
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

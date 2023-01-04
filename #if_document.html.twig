@@ -1,0 +1,13 @@
+{% if has_quotation_attached %}
+  
+  Numéro du devis : <b>{{ quotation_number }}</b><br>
+    
+{% elseif has_invoice_attached %}          
+
+  Numéro de la facture : <b>{{ invoice_number }}</b><br>
+    
+{% elseif has_document_attached %}
+
+  Numéro  du document : <b>{{ document_number }}</b><br>
+
+{% endif %}

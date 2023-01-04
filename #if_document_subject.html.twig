@@ -1,0 +1,13 @@
+{% if has_quotation_attached %}
+  
+  Devis n°{{ quotation_number }}<br>
+    
+{% elseif has_invoice_attached %}          
+
+  Facture n°{{ invoice_number }}<br>
+    
+{% else %}
+
+  Paiement n°{{ document_number }}<br>
+
+  {% endif %}

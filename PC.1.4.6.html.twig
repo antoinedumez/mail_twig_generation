@@ -1,0 +1,19 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+
+            <b>{{ user_company }}</b> a clôturé votre paiement récurrent concernant la demande <b>n°{{ demand_number }}</b>.<br>
+
+            Bénéficiaire : <b>{{ #user_denomination }}</b><br>
+            Somme acquittée : <b>{{ demand_total_amount_paid }}</b><br>
+            Date de clôture : <b>{{ demand_closing_date }}</b><br>
+           
+            {{ #if_document }}
+              
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

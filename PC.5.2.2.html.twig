@@ -1,0 +1,21 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+
+            Le paiement par prélèvement bancaire de la demande <b>n°{{ demand_number }}</b> émise par <b>{{ user_company }}</b> a été réalisé avec <b>succès</b>.<br>
+
+            Montant TTC : <b>{{ demand_recuring_amount }} €</b><br>
+
+            Bénéficiaire : <b>{{ user_company }}</b><br>
+
+            {{ #if_document }}<br>
+
+
+            Date du paiement : <b>{{ demand_paiement_date }}</b><br>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

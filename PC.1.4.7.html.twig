@@ -1,0 +1,23 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+
+            <b>{{ user_company }}</b> a suspendu votre paiement récurrent concernant la demande <b>n°{{ demand_number }}</b>.<br>
+
+            Bénéficiaire : <b>{{ #user_denomination }}</b><br>
+
+            Récurrence : {{ demand_recuring_delay }} {{ demand_recuring_type }}<br>
+
+            {{ #if_document }}
+            
+            Date de suspension : <b>{{ demand_suspend_date }}</b><br>
+
+            Vous serez averti si votre bénéficiaire relance le paiement.<br>
+              
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
