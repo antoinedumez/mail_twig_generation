@@ -1,0 +1,34 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            Votre règlement de {{ total_amount_ttc }} € TTC de la demande de paiement n°{{ demand_number }} a été divisé en {{ demand_number_splits }} échéances. 
+
+            Montant total TTC de la demande : {{ total_amount_ttc }} €
+            Bénéficiaire : {{ user_company }}
+            Nombre d'échéances : {{ demand_number_splits }} fois
+            {{ #if_document }}
+                      
+            Voici votre échéancier de paiements : 
+            - [Montant échéance] le [Date de prélèvement de la mensualité] 
+            - [Montant échéance] le [Date de prélèvement de la mensualité] 
+            - [Montant échéance] le [Date de prélèvement de la mensualité] 
+            - ....
+                      
+            Les échéances seront prélevées automatiquement sur le compte [IBANPayeurAnonymisé] aux dates indiquées. 
+            La référence de ce mandat est : [Référence Mandat SEPA]
+                      
+            En sa qualité de débiteur, Soan est référencé avec l'identifiant suivant : GB66ZZZSDDBARC0000007495895019
+            Vous retrouverez toutes les informations concernant la garantie de débit direct sur ce lien : https://www.directdebit.co.uk/DirectDebitExplained/pages/directdebitguarantee.aspx
+                      
+            Pour toute question, n'hésitez pas à nous écrire à support@soan-solutions.io
+                      
+            Si vous souhaitez consulter votre facture|devis, il vous suffit de cliquer sur le bouton ci-dessous <<< SI FACTURE | DEVIS
+  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

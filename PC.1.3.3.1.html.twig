@@ -1,0 +1,36 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            <b>{{ user_name }}</b> vous a envoyé une demande de paiement.
+            Il vous offre la possibilité de régler en <b>{{ demand_number_splits }} fois sans frais</b> et de bénéficier d'un escompte.<br>
+
+            Montant TTC total de la demande : <b>{{ total_amount_ttc }} €</b><br>
+
+            Bénéficiaire : <b>{{ user_company }}</b><br>
+
+            Nombre d'échéances : <b>{{ demand_number_splits }} fois</b><br>
+
+            Montant TTC des échéances : <b>{{ demand_split_amount }} €</b><br>
+
+            Date d'échéance : <b>{{ demand_payment_date }}</b><br>
+
+            {{ #if_document }}<br>
+
+            Montant TTC de la demande après escompte : {{ total_discount_amount_ttc }} €<br>
+
+            Montant TTC des échéances après escompte : {{ demand_split_amount }} €<br>
+
+            Pour un paiement avant le : {{ discount_payment_date }}<br>
+
+            Valeur de l'escompte : {{ total_amount_ttc }} €<br>
+
+            Pour la régler et bénéficier du {{ demand_number_splits }} fois sans frais, il vous suffit de cliquer sur le bouton ci-dessous.<br>
+  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

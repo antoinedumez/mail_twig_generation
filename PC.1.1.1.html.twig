@@ -1,0 +1,23 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            Votre demande de paiement <b>n°{{ demand_number }}</b> à <b>{{ #user_denomination }}</b> a bien été générée.<br>
+
+            Montant TTC de la demande : <b>{{ total_amount_ttc }}</b> €
+
+            Date d'échéance : <b>{{ demand_payment_date }}</b><br>
+
+            Client : <b>{{ #user_denomination }}</b><br>
+
+            {{ #if_document }}</b><br>
+
+            Votre client a reçu votre demande par mail. Vous serez informé dès que le paiement aura été effectué.<br>
+  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

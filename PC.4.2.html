@@ -1,0 +1,22 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            Le règlement de la demande de paiement n°{{ demand_number }} à {{ user_name }} a été réalisé avec succès.
+
+Montant TTC de la transaction : {{ total_amount_ttc }} €
+Date de paiement : [DatePaiement]
+Bénéficiaire : {{ user_company }}
+{{ #if_document }}
+
+Intitulé de la transaction : [intitulé]
+
+
+  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

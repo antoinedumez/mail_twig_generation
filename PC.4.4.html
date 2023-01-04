@@ -1,0 +1,23 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            L'initiation d'un virement de {{ total_amount_ttc }}  € à destination de [NomUtilisateurBénéficiare] a été effectuée.
+ 
+Montant TTC de la transaction : {{ total_amount_ttc }} €
+Date : [datePaiement]
+À : [NomEntrepriseBénéficiaire]
+{{ #if_document }}
+
+Si votre virement est validé par votre banque, l'argent sera directement débité de votre compte bancaire sous 24 à 48 heures.
+Votre fournisseur en sera averti par mail.
+
+
+  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

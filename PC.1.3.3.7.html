@@ -1,0 +1,19 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            Votre demande de paiement n°{{ demand_number }} en {{ demand_number_splits }} fois de [montantTotal] € TTC à {{ #user_denomination }} a été entièrement acquittée. 
+
+Montant total TTC de la demande : [MontantTotal] € 
+Client : {{ #user_denomination }}
+{{ #if_document }}
+
+Pour consulter le détail de votre opération, cliquez sur le bouton ci-dessous.
+  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

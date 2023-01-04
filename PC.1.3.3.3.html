@@ -1,0 +1,25 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            Votre paiement de [montantEcheance] € TTC à {{ user_name }} pour votre {{ demand_number_splits }}ière|ième échéance a bien été reçu.
+
+            Montant total TTC de la demande : [MontantTotal] € 
+
+            Bénéficiaire : {{ user_company }}
+
+            Prochaine échéance : [JJ/MM/AA] << SI PAS dernière échéance
+
+            {{ #if_document }}
+
+            Le montant sera automatiquement prélevé sur le compte bancaire utilisé lors du premier paiement.
+
+            Pour consulter votre facture|devis, il vous suffit de cliquer sur le bouton ci-dessous. << SI facture OU devis
+
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

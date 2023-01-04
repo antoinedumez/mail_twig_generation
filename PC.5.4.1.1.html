@@ -1,0 +1,21 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            Votre client [Nom entreprise OU Nom - Prénom OU adresse mail du client] a initié un paiement par virement pour la demande n°[numDemande] d'un montant de [montant €]. Cependant, il semblerait qu'une erreur soit survenue en dehors de nos systèmes. Il est possible que votre client ne soit pas allé au bout de la démarche.
+
+Montant : {{ total_amount_ttc }} €
+Client : [Nom entreprise OU Nom - Prénom OU adresse mail du client]
+{{ #if_document }}
+Date de la tentative de paiement : [datePaiement]
+
+Votre client a été averti par nos équipes et nous allons lui proposer de régler la facture via un autre moyen de paiement.
+N'hésitez pas à le contacter si le paiement n'est pas rapidement effectué.
+  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

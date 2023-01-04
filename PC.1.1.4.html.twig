@@ -1,0 +1,32 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            Votre demande de paiement <b>n°{{ demand_number }}</b> à <b>{{ #user_denomination }}</b> a bien été envoyée par email.<br>
+
+            
+            {% if not is_recurent %}
+            
+              Montant TTC de la demande : {{ total_amount_ttc }} €<br>
+            
+            {% endif %}
+
+            Date d'échéance : {{ demand_payment_date }}<br>
+
+            {% if not is_quick_payment %}
+
+              Client : {{ #user_denomination }}<br>
+            
+            {% endif %}
+
+            {{ #if_document }}<br>
+
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  

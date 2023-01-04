@@ -1,0 +1,29 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            La mise en place du paiement fractionné a été initiée par votre client {{ #user_denomination }} concernant la demande de paiement n°{{ demand_number }}. 
+
+Montant total TTC de la demande : [MontantTotal] €
+Client : {{ #user_denomination }}
+Nombre d'échéances : {{ demand_number_splits }} fois
+Date de la première échéance : [Date du jour]
+{{ #if_document }}
+
+L'échéancier de paiements : 
+- [Montant mensualité] le [Date de prélèvement de la mensualité] 
+- [Montant mensualité] le [Date de prélèvement de la mensualité] 
+- [Montant mensualité] le [Date de prélèvement de la mensualité] 
+-.....
+
+Les échéances seront prélevées automatiquement sur le compte de votre client aux dates indiquées. 
+
+Pour toute question, n'hésitez pas à écrire à support@soan-solutions.io.
+  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>

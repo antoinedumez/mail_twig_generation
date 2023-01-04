@@ -1,0 +1,32 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+  
+            {{ #user_denomination }} vient de régler votre demande de paiement n°[numérodemande] en profitant de l'escompte proposé.
+
+[Si escompte utilisé :] Montant TTC de la transaction après escompte : [MontantAprèsEscompte] €
+[Sinon:] Montant TTC de la transaction : {{ total_amount_ttc }} € 
+Client : {{ #user_denomination }}
+Date : {{ demand_payment_date }}
+{{ #if_document }}
+
+SI PRELEVEMENT 
+[Si KYC validés :] L'argent sera directement crédité sur votre compte bancaire sous 7 jours ouvrés.
+[Si KYC en attente :] Votre profil est actuellement en cours de validation. L'argent sera automatiquement crédité sur votre compte bancaire 8 jours après la validation.
+[Si KYC pas entamés :] Pour que l'argent soit transféré sur votre compte bancaire, il vous faut valider votre profil. 
+
+SI CB
+[Si KYC validés :] L'argent sera directement crédité sur votre compte bancaire sous 2 jours ouvrés.
+[Si KYC en attente :] Votre profil est actuellement en cours de validation. L'argent sera automatiquement crédité sur votre compte bancaire 2 jours après la validation.
+[Si KYC pas entamés :] Pour que l'argent soit transféré sur votre compte bancaire, il vous faut valider votre profil.
+
+Pour en savoir plus, nous vous invitons à cliquer ici [lien FAQ article KYC] ou à nous contacter à l'adresse support@soan-solutions.io.  
+Satisfait de Soan ? Dîtes-le nous en laissant un avis sur notre page Truspilot ! 
+  
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
