@@ -9,7 +9,7 @@
               et vous propose de bénéficier d'un escompte.
             {% endif %}<br>
 
-            Montant TTC de la demande : {{ total_amount_ttc }} €<br>
+            Montant TTC de la demande : {{ payin_amountTTC }} €<br>
 
             Bénéficiaire : {{ user_company }}<br>
 
@@ -17,7 +17,7 @@
 
             {{ #if_document }}<br>
 
-            Montant TTC de la demande après escompte : {{ total_amount_ttc }} €<br>
+            Montant TTC de la demande après escompte : {{ payin_amountTTC }} €<br>
 
             Pour un paiement avant le : {{ discount_payment_date }}<br>
 

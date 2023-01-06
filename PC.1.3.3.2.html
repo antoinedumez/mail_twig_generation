@@ -4,9 +4,9 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
   
-            Votre règlement de {{ total_amount_ttc }} € TTC de la demande de paiement n°{{ demand_number }} a été divisé en {{ demand_number_splits }} échéances. 
+            Votre règlement de {{ payin_amountTTC }} € TTC de la demande de paiement n°{{ demand_number }} a été divisé en {{ demand_number_splits }} échéances. 
 
-            Montant total TTC de la demande : {{ total_amount_ttc }} €
+            Montant total TTC de la demande : {{ payin_amountTTC }} €
             Bénéficiaire : {{ user_company }}
             Nombre d'échéances : {{ demand_number_splits }} fois
             {{ #if_document }}

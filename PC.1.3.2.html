@@ -11,7 +11,7 @@
 
             Montant TTC de l'acompte : <b>{{ deposit_amount }} €</b><br>
 
-            Montant TTC total : <b>{{ total_amount_ttc }} €</b><br>
+            Montant TTC total : <b>{{ payin_amountTTC }} €</b><br>
             ===== A VOIR ICI =====
             Solde restant : <b>[Montant du solde] €</b><br> (<< SI ce n'est pas le solde)
             ===== FIN =====
@@ -22,11 +22,11 @@
             {{ #if_document }}<br>
 
             ===== A VOIR ICI =====
-            Montant TTC d'acompte après escompte : {{ total_amount_ttc }} €<br>
+            Montant TTC d'acompte après escompte : {{ payin_amountTTC }} €<br>
             
             Pour un paiement avant le : {{ discount_payment_date }}<br>
 
-            Valeur de l'escompte : {{ total_amount_ttc }} €<br>
+            Valeur de l'escompte : {{ payin_amountTTC }} €<br>
             ===== FIN =====
             Pour la régler, il vous suffit de cliquer sur le bouton ci-dessous.<br>
   

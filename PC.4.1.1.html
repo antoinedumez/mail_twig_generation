@@ -4,26 +4,40 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
   
-            {{ #user_denomination }} vient de régler votre demande de paiement n°[numérodemande] en profitant de l'escompte proposé.
+            <b>{{ #user_denomination }}</b> vient de régler votre demande de paiement <b>n°{{ demand_number }}</b> en profitant de l'escompte proposé.<br>
 
-[Si escompte utilisé :] Montant TTC de la transaction après escompte : [MontantAprèsEscompte] €
-[Sinon:] Montant TTC de la transaction : {{ total_amount_ttc }} € 
-Client : {{ #user_denomination }}
-Date : {{ demand_payment_date }}
-{{ #if_document }}
+            {% if discount_amount is defined %}
+            
+              Montant TTC de la transaction après escompte : <b>{{ (payin_amountTTC - discount_amount) / 1000 }} €</b><br>
+            
+            {% else %}
+            
+            Montant TTC de la transaction : <b>{{ payin_amountTTC }} €</b><br>
 
-SI PRELEVEMENT 
-[Si KYC validés :] L'argent sera directement crédité sur votre compte bancaire sous 7 jours ouvrés.
-[Si KYC en attente :] Votre profil est actuellement en cours de validation. L'argent sera automatiquement crédité sur votre compte bancaire 8 jours après la validation.
-[Si KYC pas entamés :] Pour que l'argent soit transféré sur votre compte bancaire, il vous faut valider votre profil. 
+            {% endif %}
+            
+            Client : <b>{{ #user_denomination }}</b><br>
 
-SI CB
-[Si KYC validés :] L'argent sera directement crédité sur votre compte bancaire sous 2 jours ouvrés.
-[Si KYC en attente :] Votre profil est actuellement en cours de validation. L'argent sera automatiquement crédité sur votre compte bancaire 2 jours après la validation.
-[Si KYC pas entamés :] Pour que l'argent soit transféré sur votre compte bancaire, il vous faut valider votre profil.
+            Date : <b>{{ demand_payment_date }}</b><br>
+            
+            <b>{{ #if_document }}</b><br>
 
-Pour en savoir plus, nous vous invitons à cliquer ici [lien FAQ article KYC] ou à nous contacter à l'adresse support@soan-solutions.io.  
-Satisfait de Soan ? Dîtes-le nous en laissant un avis sur notre page Truspilot ! 
+            SI PRELEVEMENT 
+            [Si KYC validés :] L'argent sera directement crédité sur votre compte bancaire sous 7 jours ouvrés.<br>
+
+            [Si KYC en attente :] Votre profil est actuellement en cours de validation. L'argent sera automatiquement crédité sur votre compte bancaire 8 jours après la validation.<br>
+
+            [Si KYC pas entamés :] Pour que l'argent soit transféré sur votre compte bancaire, il vous faut valider votre profil. <br>
+
+            SI CB
+            [Si KYC validés :] L'argent sera directement crédité sur votre compte bancaire sous 2 jours ouvrés.<br>
+            
+            [Si KYC en attente :] Votre profil est actuellement en cours de validation. L'argent sera automatiquement crédité sur votre compte bancaire 2 jours après la validation.<br>
+
+            [Si KYC pas entamés :] Pour que l'argent soit transféré sur votre compte bancaire, il vous faut valider votre profil.<br>
+
+            Pour en savoir plus, nous vous invitons à cliquer ici [lien FAQ article KYC] ou à nous contacter à l'adresse support@soan-solutions.io.<br>
+            Satisfait de Soan ? Dîtes-le nous en laissant un avis sur notre page Truspilot !<br>
   
           </td>
         </tr>
