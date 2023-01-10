@@ -4,14 +4,14 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
             
-            Votre demande de paiement <b>n°{{ demand_number }}</b> à <b>{{ #user_denomination }}</b> a bien été programmée pour le <b>{{ demand_first_recuring_date }}</b>.<br>
+            Votre demande de paiement <b>n°{{ payin_number }}</b> à <b>{{ #creditor_user_denomination }}</b> a bien été programmée pour le <b>{{ demand_first_recuring_date }}</b>.<br>
 
             {% if not is_recurent %}
               Montant TTC de la demande : <b>{{ demand_total_amount }} €</b><br>
             {% endif %}
 
             Date d'envoi programmé : <b>{{ program_date }}</b><br>
-            Client : <b>{{ #user_denomination }}</b><br>
+            Client : <b>{{ #creditor_user_denomination }}</b><br>
 
             {{ #if_document }}
 

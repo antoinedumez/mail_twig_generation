@@ -11,7 +11,7 @@
       <tr>
         <td style="font-size: 14px; color: #02130e">
         
-          Votre demande de paiement récurrent <b>n°{{ demand_number }}</b> à <b>{{ #user_denomination }}</b> a bien été générée. <br />
+          Votre demande de paiement récurrent <b>n°{{ payin_number }}</b> à <b>{{ #creditor_user_denomination }}</b> a bien été générée. <br />
 
           Montant TTC des échéances : <b>{{ demand_recuring_amount }}</b> € <br />
           Récurrence : <b>Tous les {{ demand_recuring_delay }} {{ demand_recuring_type }}</b><br/>
@@ -20,7 +20,7 @@
             Date de fin : <b>{{ demand_end_date }}</b> <br />
           {% endif %} 
           
-          Client : <b>{{ #user_denomination }}</b><br />
+          Client : <b>{{ #creditor_user_denomination }}</b><br />
 
           {{ #if_document }} 
           

@@ -4,9 +4,9 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
 
-            Le paiement récurrent de votre client <b>{{ #user_denomination }}</b> concernant la demande <b>n°{{ demand_number }}</b> est maintenant terminé.<br>
+            Le paiement récurrent de votre client <b>{{ #creditor_user_denomination }}</b> concernant la demande <b>n°{{ payin_number }}</b> est maintenant terminé.<br>
 
-            Client : <b>{{ #user_denomination }}</b><br>
+            Client : <b>{{ #creditor_user_denomination }}</b><br>
             
             {{ #if_document }}<br>
 

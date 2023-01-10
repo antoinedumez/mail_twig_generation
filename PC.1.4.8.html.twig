@@ -4,9 +4,9 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
 
-            <b>{{ user_company }}</b> a relancé votre paiement récurrent concernant la demande <b>n°{{ demand_number }}</b>.<br>
+            <b>{{ user_company }}</b> a relancé votre paiement récurrent concernant la demande <b>n°{{ payin_number }}</b>.<br>
 
-            Bénéficiaire : <b>{{ #user_denomination }}</b><br>
+            Bénéficiaire : <b>{{ #creditor_user_denomination }}</b><br>
             
             Récurrence : Tous {{ demand_recuring_delay }} {{ demand_recuring_type }} <br>
                         

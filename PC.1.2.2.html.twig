@@ -4,13 +4,13 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
             
-            Votre demande de paiement programmée <b>n°{{ demand_number }}</b> de <b>{{ demand_total_amount }}</b> € TTC à <b>{{ #user_denomination }} a bien été annulée</b>.<br>
+            Votre demande de paiement programmée <b>n°{{ payin_number }}</b> de <b>{{ demand_total_amount }}</b> € TTC à <b>{{ #creditor_user_denomination }} a bien été annulée</b>.<br>
 
             {% if not is_recurent %}
               Montant TTC de la demande : <b>{{ demand_total_amount }} €</b><br>
             {% endif %}
 
-            Client : <b>{{ #user_denomination }}</b><br>
+            Client : <b>{{ #creditor_user_denomination }}</b><br>
 
             {{ #if_document }}
             

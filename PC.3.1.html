@@ -4,10 +4,10 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
   
-            Nous vous confirmons que votre demande de paiement n°{{ demand_number }} de {{ payin_amountTTC }} € à [nomDestinataire] a bien été annulée.
+            Nous vous confirmons que votre demande de paiement n°{{ payin_number }} de {{ payin_amountTTC }} € à [nomDestinataire] a bien été annulée.
 
 Montant de la demande TTC : {{ payin_amountTTC }} €
-Client : {{ #user_denomination }}
+Client : {{ #creditor_user_denomination }}
 
 {{ #if_document }}
 

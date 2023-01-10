@@ -4,10 +4,10 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
   
-            Le prélèvement de la {{ demand_number_splits }}ière|ième échéance a été initié pour un montant de [montantEcheance] € TTC à {{ #user_denomination }}  concernant la demande de paiement n°{{ demand_number }}.
+            Le prélèvement de la {{ demand_number_splits }}ière|ième échéance a été initié pour un montant de [montantEcheance] € TTC à {{ #creditor_user_denomination }}  concernant la demande de paiement n°{{ payin_number }}.
 
 Montant total TTC de la demande : [MontantTotal] € 
-Client : {{ #user_denomination }}
+Client : {{ #creditor_user_denomination }}
 État d'avancement : [Xpayées/NombreTotalEcheances]
 Prochaine échéance : [JJ/MM/AA]
 {{ #if_document }}

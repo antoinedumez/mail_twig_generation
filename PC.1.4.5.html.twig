@@ -4,11 +4,11 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
 
-            Le prélèvement de la <b>{{ demand_recuring_number }}</b> échéance a été initié pour un montant de <b>{{ demand_recuring_amount }} € TTC</b> à <b>{{ #user_denomination }}</b> concernant la demande de paiement récurrent <b>n°{{ demand_number }}</b>.<br>
+            Le prélèvement de la <b>{{ demand_recuring_number }}</b> échéance a été initié pour un montant de <b>{{ demand_recuring_amount }} € TTC</b> à <b>{{ #creditor_user_denomination }}</b> concernant la demande de paiement récurrent <b>n°{{ payin_number }}</b>.<br>
 
             Montant TTC de l'échéance : <b>{{ demand_recuring_amount }} €</b><br>
 
-            Client : <b>{{ #user_denomination }}</b><br>
+            Client : <b>{{ #creditor_user_denomination }}</b><br>
 
             {% if demand_next_recuring_date < demand_closing_date %}
               Prochaine échéance : <b>{{ demand_next_recuring_date }}</b><br>

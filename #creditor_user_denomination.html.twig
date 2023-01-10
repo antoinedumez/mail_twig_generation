@@ -1,0 +1,8 @@
+{% if creditor_companyName is defined %} 
+  {{ creditor_companyName }}
+{% elseif creditor_fullNameUser is defined %}
+  {{ creditor_fullNameUser }}
+{% else %}
+  {{ creditor_emailUser }}
+{% endif %}
+

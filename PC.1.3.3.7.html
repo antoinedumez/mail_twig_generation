@@ -4,10 +4,10 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
   
-            Votre demande de paiement n°{{ demand_number }} en {{ demand_number_splits }} fois de [montantTotal] € TTC à {{ #user_denomination }} a été entièrement acquittée. 
+            Votre demande de paiement n°{{ payin_number }} en {{ demand_number_splits }} fois de [montantTotal] € TTC à {{ #creditor_user_denomination }} a été entièrement acquittée. 
 
 Montant total TTC de la demande : [MontantTotal] € 
-Client : {{ #user_denomination }}
+Client : {{ #creditor_user_denomination }}
 {{ #if_document }}
 
 Pour consulter le détail de votre opération, cliquez sur le bouton ci-dessous.

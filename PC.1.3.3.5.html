@@ -4,10 +4,10 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
   
-            La mise en place du paiement fractionné a été initiée par votre client {{ #user_denomination }} concernant la demande de paiement n°{{ demand_number }}. 
+            La mise en place du paiement fractionné a été initiée par votre client {{ #creditor_user_denomination }} concernant la demande de paiement n°{{ payin_number }}. 
 
 Montant total TTC de la demande : [MontantTotal] €
-Client : {{ #user_denomination }}
+Client : {{ #creditor_user_denomination }}
 Nombre d'échéances : {{ demand_number_splits }} fois
 Date de la première échéance : [Date du jour]
 {{ #if_document }}

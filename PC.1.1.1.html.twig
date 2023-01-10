@@ -4,13 +4,13 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
   
-            Votre demande de paiement <b>n°{{ demand_number }}</b> à <b>{{ #user_denomination }}</b> a bien été générée.<br>
+            Votre demande de paiement <b>n°{{ payin_number }}</b> à <b>{{ #creditor_user_denomination }}</b> a bien été générée.<br>
 
             Montant TTC de la demande : <b>{{ payin_amountTTC }}</b> €
 
-            Date d'échéance : <b>{{ demand_payment_date }}</b><br>
+            Date d'échéance : <b>{{ payin_paidDate }}</b><br>
 
-            Client : <b>{{ #user_denomination }}</b><br>
+            Client : <b>{{ #creditor_user_denomination }}</b><br>
 
             {{ #if_document }}</b><br>
 

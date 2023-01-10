@@ -4,11 +4,11 @@
         <tr>
           <td style="font-size: 14px; color:#02130e;">
             
-            Vous venez d'accepter le lancement du paiement récurrent <b>n°{{ demand_number }}</b> à <b>{{ user_company }}</b>.
+            Vous venez d'accepter le lancement du paiement récurrent <b>n°{{ payin_number }}</b> à <b>{{ user_company }}</b>.
             Le prélèvement se renouvellera automatiquement pour <b>{{ demand_recuring_amount }}</b> € à compter du <b>{{ demand_first_recuring_date }}</b> jusqu'à sa résiliation.<br>
 
             Montant TTC des échéances : <b>{{ demand_recuring_amount }} €</b><br>
-            Bénéficiaire : <b>{{ #user_denomination }}</b><br>
+            Bénéficiaire : <b>{{ #creditor_user_denomination }}</b><br>
             Récurrence : <b>{{ demand_recuring_delay }} {{ demand_recuring_type }}</b><br>
 
             {{ #if_document }}

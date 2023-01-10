@@ -1,0 +1,59 @@
+<tr>
+    <td class="email-content" align="center">
+      <table style="width: 100%; margin: 0 auto; background-color: #ffffff;" class="p-none" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="font-size: 14px; color:#02130e;">
+            {{ #header }}
+            <b>{{ #creditor_user_denomination }}</b> vient de régler votre demande de paiement <b>n°{{ payin_number }}</b> en profitant de l'escompte proposé.<br>
+
+            {% if discount_amount is defined and discount_isUsed %}
+            
+              Montant TTC de la transaction après escompte : <b>{{  (payin_amountTTC - discount_amount) / 1000 }} €</b><br>
+            
+            {% else %}
+            
+              Montant TTC de la transaction : <b>{{ payin_amountTTC }} €</b><br>
+
+            {% endif %}
+            
+            Client : <b>{{ #creditor_user_denomination }}</b><br>
+
+            Date : <b>{{ payin_paidDate.date|date("d/m/Y \\à h\\hm", "Europe/Paris") }}</b><br>
+            
+            <b>{{ #if_document }}</b><br>
+
+            {% if payin_paymentWay is same as("DEBIT") %}
+            
+              {% if payin_creditor["isVerifiedUser"] %}
+                
+                L'argent sera directement crédité sur votre compte bancaire sous 7 jours ouvrés.<br>
+
+              {% else %}
+              
+                Pour que l'argent soit transféré sur votre compte bancaire, il vous faut valider votre profil. L'argent sera automatiquement crédité sur votre compte bancaire 8 jours après la validation.<br>
+
+              {% endif %}
+
+            {% elseif payin_paymentWay is same as("CARD") %}    
+            
+              {% if payin_creditor["isVerifiedUser"] %}
+              
+                L'argent sera directement crédité sur votre compte bancaire sous 2 jours ouvrés.<br>
+              
+              {% else %}
+
+                Pour que l'argent soit transféré sur votre compte bancaire, il vous faut valider votre profil. L'argent sera automatiquement crédité sur votre compte bancaire 2 jours après la validation.<br>
+                  
+                Pour en savoir plus, nous vous invitons à cliquer ici :  <a href="https://help.soan-solutions.io/comment-passer-a-un-compte-verifie">FAQ article KYC</a> ou à nous contacter à l'adresse support@soan-solutions.io.<br>
+
+              {% endif %}
+
+            {% endif %}
+
+            Satisfait de Soan ? Dîtes-le nous en laissant un avis sur notre page Truspilot !<br>
+            {{ #footer }}
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
